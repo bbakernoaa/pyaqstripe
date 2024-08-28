@@ -1,5 +1,4 @@
-"""
-pyaqstripe"""
+"""pyaqstripe"""
 
 from . import colorbar_module
 
