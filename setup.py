@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="pyaqstripe",
     version="0.1.0",
-    description="A Python wrapper for the AQSTripes following https://airqualitystripes.info/?country=Vatican%20City&city=Vatican%20City",
+    description="A Python wrapper for the AQSTripes following https://airqualitystripes.info",
     author="Barry Baker",
     author_email="barry.baker@noaa.gov",
     url="https://github.com/bbakernoaa/pyaqstripe",
