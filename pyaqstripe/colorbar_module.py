@@ -59,7 +59,9 @@ def create_bokeh_colorbar(continuous=True, ncolors=13, show=False):
 
     if continuous:
         mapper = LinearColorMapper(
-            palette=[f"#{r:02x}{g:02x}{b:02x}" for r, g, b in aqstripes_rgb_colors], low=0, high=1
+            palette=[f"#{r:02x}{g:02x}{b:02x}" for r, g, b in aqstripes_rgb_colors],
+            low=0,
+            high=1,
         )
         color_bar = ColorBar(
             color_mapper=mapper, width=500, height=20, orientation="horizontal"
