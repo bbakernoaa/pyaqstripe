@@ -1,9 +1,12 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name="pyaqstripe",
     version="0.1.0",
-    description="A Python wrapper for the AQSTripes following https://airqualitystripes.info",
+    description=(
+        "A Python implementation of the Air Quality Stripes colormap "
+        "following https://airqualitystripes.info"
+    ),
     author="Barry Baker",
     author_email="barry.baker@noaa.gov",
     url="https://github.com/bbakernoaa/pyaqstripe",

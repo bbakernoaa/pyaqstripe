@@ -1,7 +1,4 @@
-
-
 import numpy as np
-
 
 aqstripes_rgb_colors = np.array(
     object=[
@@ -63,7 +60,10 @@ def create_matplotlib_colorbar(ncolors=14, continuous=True, show=False):
         norm = plt.Normalize(vmin=0, vmax=1)
         if show:
             plt.imshow(
-                [np.linspace(0, 1, ncolors)], aspect="auto", cmap=cmap, norm=norm
+                [np.linspace(0, 1, ncolors)],
+                aspect="auto",
+                cmap=cmap,
+                norm=norm,
             )
             plt.colorbar(ticks=bounds)
             plt.show()
@@ -92,9 +92,9 @@ def create_bokeh_colorbar(continuous=True, ncolors=13, show=False):
     color_bar : Bokeh.models.ColorBar, optional
         If show=False, return the colorbar as a Bokeh.models.ColorBar object.
     """
-    from bokeh.plotting import figure, show
-    from bokeh.models import ColorBar, LinearColorMapper
     from bokeh.io import output_notebook
+    from bokeh.models import ColorBar, LinearColorMapper
+    from bokeh.plotting import figure, show
 
     output_notebook()
 
