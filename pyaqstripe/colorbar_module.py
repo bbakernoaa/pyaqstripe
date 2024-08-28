@@ -1,4 +1,4 @@
-# colorbar_module.py
+
 
 import numpy as np
 
@@ -23,6 +23,27 @@ aqstripes_rgb_colors = np.array(
 
 
 def create_matplotlib_colorbar(ncolors=14, continuous=True, show=False):
+    """
+    Create a matplotlib colorbar with AQSTripes colors.
+
+    Parameters
+    ----------
+    ncolors : int, optional
+        Number of discrete colors in the colorbar if continuous=False.
+        Default is 14.
+    continuous : bool, optional
+        If True, create a continuous colorbar. Otherwise, create a discrete
+        colorbar. Default is True.
+    show : bool, optional
+        If True, show the colorbar. Otherwise, return the colorbar as a
+        Matplotlib.colors.LinearSegmentedColormap object. Default is False.
+
+    Returns
+    -------
+    cmap : Matplotlib.colors.LinearSegmentedColormap, optional
+        If show=False, return the colorbar as a
+        Matplotlib.colors.LinearSegmentedColormap object.
+    """
     import matplotlib.pyplot as plt
     from matplotlib.colors import LinearSegmentedColormap
 
@@ -51,6 +72,26 @@ def create_matplotlib_colorbar(ncolors=14, continuous=True, show=False):
 
 
 def create_bokeh_colorbar(continuous=True, ncolors=13, show=False):
+    """
+    Create a Bokeh colorbar with AQSTripes colors.
+
+    Parameters
+    ----------
+    continuous : bool, optional
+        If True, create a continuous colorbar. Otherwise, create a discrete
+        colorbar. Default is True.
+    ncolors : int, optional
+        Number of discrete colors in the colorbar if continuous=False.
+        Default is 13.
+    show : bool, optional
+        If True, show the colorbar. Otherwise, return the colorbar as a
+        Bokeh.models.ColorBar object. Default is False.
+
+    Returns
+    -------
+    color_bar : Bokeh.models.ColorBar, optional
+        If show=False, return the colorbar as a Bokeh.models.ColorBar object.
+    """
     from bokeh.plotting import figure, show
     from bokeh.models import ColorBar, LinearColorMapper
     from bokeh.io import output_notebook
